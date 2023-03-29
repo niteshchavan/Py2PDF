@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Merge</title>
+</head>
+<body>
+    <ul>
+{% extends 'home.html' %}
+
+{% block content %}
+    <h1>Merge PDF Files</h1>
+    <form method="post" action="{{ url_for('merge') }}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="file">Select PDF Files to Merge:</label>
+            <input type="file" name="file" id="file" class="form-control-file" multiple required>
+        </div>
+        <button type="submit" class="btn btn-primary">Merge PDFs</button>
+    </form>
+{% endblock %}
+
+
+    </ul>
+</body>
+</html>

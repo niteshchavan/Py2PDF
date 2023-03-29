@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Splitter</title>
+</head>
+<body>
+
+	<ul>
+
+	{% extends 'home.html' %}
+
+	{% block content %}
+        {% for i in range(num_pages) %}
+        <li><a href="/output/page_{{ i+1 }}.pdf">Page {{ i+1 }}</a></li>
+        {% endfor %}
+	{% endblock %}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Splitter</title>
+</head>
+<body>
+    <ul>
+{% extends 'home.html' %}
+
+{% block content %}
+    <h1>Split a PDF</h1>
+	<form method="post" action="{{ url_for('split') }}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="file">Select PDF file to Split:</label>
+            <input type="file" name="file" id="file" class="form-control-file">
+        </div>
+        <button type="submit" class="btn btn-primary">Split</button>
+    </form>
+{% endblock %}
+
+
+    </ul>
+
+</body>
+</html>
