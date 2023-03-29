@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Convert To Word</title>
+</head>
+<body>
+
+	<ul>
+{% extends 'home.html' %}
+
+{% block content %}
+    <h1>PDF to Word Conversion</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required><br><br>
+        <input type="submit" value="Convert">
+    </form>
+{% endblock %}
+
+    </ul>
+
+</body>
+</html>
+
+
